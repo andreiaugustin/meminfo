@@ -1,0 +1,41 @@
+{
+	"classtype": "kTask",
+	"omnisversion": "11.0",
+	"omnisbuild": 110035622,
+	"internalversion": 9,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "test",
+			"order": 1,
+			"type": "kObject",
+			"subtype": "oAPI",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componentinfo": {
+
+		},
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2023-09-21 12:29:18",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2023-09-21 13:11:37",
+		"showascheckedout": false,
+		"userinfo": "",
+		"vcsrevision": 0,
+		"version": ""
+	}
+}

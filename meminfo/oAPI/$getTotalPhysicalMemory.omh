@@ -1,0 +1,19 @@
+Switch sys(6)
+	Case 'N' ## Windows
+		
+	Case 'U' ## Linux
+		
+	Case 'X' ## macOS
+		Do proc.$init('/usr/sbin/sysctl',row('-n','hw.memsize'))
+End Switch
+
+Do proc.$run()
+
+If proc.$exitcode
+	Do proc.$readlines(kOProcessStderr) Returns stream
+	Calculate pErrorText as stream.1.stderr
+	Quit method
+Else
+	Do proc.$readlines(kOProcessStdout) Returns stream
+	Quit method stream.1.stdout
+End If

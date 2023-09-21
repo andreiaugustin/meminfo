@@ -1,0 +1,96 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getTotalPhysicalMemory",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pErrorText",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "bytes",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k64bitint",
+				"sublen": 0
+			},
+			{
+				"name": "proc",
+				"order": 1,
+				"type": "kObject",
+				"subtype": ".OProcess.OProcess Worker\\OProcess",
+				"sublen": 0
+			},
+			{
+				"name": "stream",
+				"order": 4,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$getAvailablePhysicalMemory",
+		"order": 5,
+		"pvardefs": [
+			{
+				"name": "pErrorText",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "availablePages",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "k64bitint",
+				"sublen": 0
+			},
+			{
+				"name": "proc",
+				"order": 1,
+				"type": "kObject",
+				"subtype": ".OProcess.OProcess Worker\\OProcess",
+				"sublen": 0
+			},
+			{
+				"name": "stream",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

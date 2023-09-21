@@ -1,0 +1,30 @@
+Switch sys(6)
+	Case 'N' ## Windows
+		
+	Case 'U' ## Linux
+		
+	Case 'X' ## macOS
+		Do proc.$init('/usr/sbin/sysctl',row('-n','vm.page_free_count'))
+		Do proc.$run()
+		
+		If proc.$exitcode
+			Do proc.$readlines(kOProcessStderr) Returns stream
+			Calculate pErrorText as stream.1.stderr
+			Quit method
+		Else
+			Do proc.$readlines(kOProcessStdout) Returns stream
+			Calculate availablePages as stream.1.stdout
+		End If
+		
+		Do proc.$init('/usr/sbin/sysctl',row('-n','vm.pagesize'))
+		Do proc.$run()
+		
+		If proc.$exitcode
+			Do proc.$readlines(kOProcessStderr) Returns stream
+			Calculate pErrorText as stream.1.stderr
+			Quit method
+		Else
+			Do proc.$readlines(kOProcessStdout) Returns stream
+			Quit method availablePages*stream.1.stdout
+		End If
+End Switch
