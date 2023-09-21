@@ -1,4 +1,5 @@
 # meminfo
+
 Omnis Studio API library exposing the system's memory-related information
 
 ## How to build
@@ -7,7 +8,7 @@ From Omnis Studio, use the `Create project library from JSON` from Project Libra
 
 ## How to use
 
-The library is designed to be exported through an API object. Use `$root.$modes.$getapiobject(cLibraryName)` to obtain a new object reference of the APIs this library exports.
+The library is designed to be exported through an API object. Use `$root.$modes.$getapiobject('meminfo')` to obtain a new object reference of the APIs this library exports.
 
 ## Available APIs
 
@@ -16,5 +17,3 @@ The library is designed to be exported through an API object. Use `$root.$modes.
 `$getTotalPhysicalMemory(pErrorText)` returns the bytes of physical memory for your system.
 
 `$getAvailablePhysicalMemory(pErrorText` returns the bytes of available phyisical memory for your system.
-
-
